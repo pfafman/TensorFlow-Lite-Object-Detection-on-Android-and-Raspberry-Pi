@@ -28,7 +28,8 @@ pkg = importlib.util.find_spec('tensorflow')
 if pkg is None:
     from tflite_runtime.interpreter import Interpreter
 else:
-    from tensorflow.lite.python.interpreter import Interpreter
+    #from tensorflow.lite.python.interpreter import Interpreter
+    from tensorflow.python.interpreter import Interpreter
 
 # Define VideoStream class to handle streaming of video from webcam in separate processing thread
 # Source - Adrian Rosebrock, PyImageSearch: https://www.pyimagesearch.com/2015/12/28/increasing-raspberry-pi-fps-with-python-and-opencv/
