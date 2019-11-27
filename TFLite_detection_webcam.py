@@ -81,7 +81,7 @@ parser.add_argument('--graph', help='Name of the .tflite file, if different than
 parser.add_argument('--labels', help='Name of the labelmap file, if different than labelmap.txt',
                     default='labelmap.txt')
 parser.add_argument('--threshold', help='Minimum confidence threshold for displaying detected objects',
-                    default=0.25)
+                    default=0.5)
 parser.add_argument('--resolution', help='Desired webcam resolution in WxH. If the webcam does not support the resolution entered, errors may occur.',
                     default='1920x1080')  # 1920×1080 1280x720
 
@@ -91,7 +91,7 @@ MODEL_NAME = args.modeldir
 GRAPH_NAME = args.graph
 LABELMAP_NAME = args.labels
 
-min_conf_threshold = args.threshold
+min_conf_threshold = int(args.threshold)
 
 resW, resH = args.resolution.split('x')
 imW, imH = int(resW), int(resH)
