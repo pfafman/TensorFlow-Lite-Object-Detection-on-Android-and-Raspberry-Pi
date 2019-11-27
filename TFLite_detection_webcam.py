@@ -91,7 +91,7 @@ MODEL_NAME = args.modeldir
 GRAPH_NAME = args.graph
 LABELMAP_NAME = args.labels
 
-min_conf_threshold = int(args.threshold)
+min_conf_threshold = float(args.threshold)
 
 resW, resH = args.resolution.split('x')
 imW, imH = int(resW), int(resH)
