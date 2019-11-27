@@ -175,7 +175,7 @@ while True:
 
             if object_name == "person":
 
-                people++
+                people += 1
                 # Get bounding box coordinates and draw box
                 # Interpreter can return coordinates that are outside of image dimensions, need to force them to be within image using max() and min()
                 ymin = int(max(1,(boxes[i][0] * imH)))
