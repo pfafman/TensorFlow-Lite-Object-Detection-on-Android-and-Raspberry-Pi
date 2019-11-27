@@ -173,9 +173,10 @@ while True:
 
             object_name = labels[int(classes[i])] # Look up object name from "labels" array using class index
 
-            if object_name == "person":
+            if object_name in ["person","dog","cat"]:
 
-                people += 1
+                if object_name == "person":
+                    people += 1
                 # Get bounding box coordinates and draw box
                 # Interpreter can return coordinates that are outside of image dimensions, need to force them to be within image using max() and min()
                 ymin = int(max(1,(boxes[i][0] * imH)))
